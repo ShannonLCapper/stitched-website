@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="StitchedWebsite">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="author" content="Shannon L Capper">
+	<meta name="description" content="Personal website of Shannon L Capper, including resume, coding portfolio, artwork, and contact information.">
+	<meta property="og:image" content="/images/gradient-logo.png">
+  <meta property="og:description" content="Includes resume, coding portfolio, artwork, and contact info">
+  <meta property="og:title" content="Shannon L Capper's Personal Website">
+
+	<title>Shannon Capper - Personal Website</title>
+
+	<!-- <base href="/"> -->
+
+	<link rel="Shortcut Icon" href="images/favicon/favicon2.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="icomoon/style.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/routes.js"></script>
+	<script type="text/javascript" src="js/directives/coming-soon-directive.js"></script>
+	<script type="text/javascript" src="js/directives/page-title-directive.js"></script>
+	<script type="text/javascript" src="js/directives/auto-active-directive.js"></script>
+	<script type="text/javascript" src="js/controllers/photos-controller.js"></script>
+	
+	<script defer src="https://www.google.com/jsapi" type="text/javascript"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script defer src="js/contact-form-submit.js"></script>
+	<script defer type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<nav auto-active>
+			<a href="#/">
+				<img id="logo-swatch" src="images/logo/logo-swatch.png" srcset="images/logo/logo-swatch.svg" alt="Home Page">
+		  </a><a href="#/resume">
+		  	<div class="button-contents">
+		    	<i class="icon fa fa-file-text"></i>
+		    	Resume
+		    </div>
+	    </a><a href="#/portfolio">
+	    	<div class="button-contents">
+	    		<i class="icon icomoon icon-portfolio"></i>
+	    		Portfolio
+	    	</div>
+	    </a><a href="#/artwork">
+	    	<div class="button-contents">
+	    		<i class="icon fa fa-pencil-square"></i>
+	    		Artwork
+	    </div>
+	    </a><a href="#/photos">
+	    	<div class="button-contents">
+	    		<i class="icon fa fa-camera"></i>
+	    		Photos
+	    	</div>
+	    </a><a href="#/contact" class="contact">
+	    	<div class="button-contents">
+	    		<i class="icon fa fa-envelope"></i>
+	    		Contact
+	    	</div>
+	    </a><a href="#/home" class="home">
+	    	<div class="stitch gold">
+	    		<div class="button-contents">
+	    			<i class="icon icomoon icon-logo"></i>
+	    		</div>
+	    	</div>
+	    </a><a href id="nav-menu-button" class="menu" onclick="showHide('nav-menu-button', 'nav-menu-dropdown')">
+	    	<div class="stitch gold">
+	    		<div class="button-contents">
+	    			<i class="icon fa fa-bars"></i>
+	    		</div>
+	    	</div>
+	    </a>
+	    <ul id="nav-menu-dropdown">
+	    	<li>
+	    		<a href="#/resume">
+	    			<i class="icon fa fa-file-text"></i>
+	    			Resume
+	    		</a>
+	    	</li>
+	    	<li>
+	    		<a href="#/portfolio">
+	    			<i class="icon icomoon icon-portfolio"></i>
+	    			Portfolio
+	    		</a>
+	    	</li>
+	    	<li>
+	    		<a href="#/artwork">
+	    			<i class="icon fa fa-pencil-square"></i>
+	    			Artwork
+	    		</a>
+	    	</li>
+	    	<li>
+	    		<a href="#/photos">
+	    			<i class="icon fa fa-camera"></i>
+	    			Photos
+	    		</a>
+	    	</li>
+	    	<li>
+	    		<a href="#/contact">
+	    			<i class="icon fa fa-envelope"></i>
+	    			Contact
+	    		</a>
+	    	</li>
+	    </ul>
+		</nav>
+	</header>
+
+
+	<main>
+
+		<div id="main-outer">
+			<div id="main-content">
+				<div ng-view></div>
+			</div>
+		</div>
+
+		<aside>
+			<div id="visible-sidebar">
+
+				<div id="sidebar-top-wrapper">
+					<div id="sidebar-top"></div>
+				</div>
+
+				<div id="sidebar-outer">
+					<div id="sidebar-content">
+						<h3>Quick Nav</h3>
+						<ul auto-active>
+							<li>
+								<a class="side-opt no-drop" href="#/">Home</a>
+							</li>
+							<li>
+								<a class="side-opt no-drop" href="#/resume">Resume</a>
+							</li>
+							<li id="sidebar-portfolio" class="side-opt" onclick="showHide('sidebar-portfolio', 'portfolio-dropdown'); hide('sidebar-artwork', 'artwork-dropdown'); hide('sidebar-photos', 'photos-dropdown')">
+								<a>Portfolio</a>
+								<ul id="portfolio-dropdown" class="side-dropdown">
+									<li><a href="#/portfolio/zorkda">Legend of Zorkda</a></li>
+									<li><a href="https://sudoku-solver-sc.herokuapp.com" target="_blank">Sudoku Solver</a></li>
+									<li><a href="#/portfolio/detour-assistant">Detour Assistant</a></li>
+								</ul>
+							</li>
+							<li id="sidebar-artwork" class="side-opt" onclick="showHide('sidebar-artwork', 'artwork-dropdown'); hide('sidebar-portfolio', 'portfolio-dropdown'); hide('sidebar-photos', 'photos-dropdown')">
+								<a>Artwork</a>
+								<ul id="artwork-dropdown" class="side-dropdown">
+									<li><a href="#/artwork/tattoos">Tattoo Design</a></li>
+									<li><a href="#/artwork/graphic-design">Graphic Design</a></li>
+									<li><a href="#/artwork/pet-portraits">Pet Portraits</a></li>
+									<li><a href="#/artwork/misc">Miscellaneous</a></li>
+								</ul>
+							</li>
+							<li id="sidebar-photos" class="side-opt" onclick="showHide('sidebar-photos', 'photos-dropdown'); hide('sidebar-portfolio', 'portfolio-dropdown'); hide('sidebar-artwork', 'artwork-dropdown')">
+								<a>Photos</a>
+								<ul id="photos-dropdown" class="side-dropdown">
+									<li><a href="#/photos/ireland">Ireland</a></li>
+									<li><a href="#/photos/washington">Washington State</a></li>
+									<li><a href="#/photos/mia">Mia</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="side-opt no-drop" href="#/contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="sidebar-bottom-wrapper">
+					<div id="sidebar-bottom"></div>
+				</div>
+
+			</div>
+		</aside>
+	</main>
+
+
+	<footer>
+		<p>&copy; Shannon Capper, 2016<br>All rights reserved.</p>
+	</footer>
+</body>
+
+</html>

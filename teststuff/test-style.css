@@ -1,0 +1,45 @@
+#triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 40px solid green;
+    border-left: 100px solid transparent;
+}
+
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid rgba(66, 16, 38, 0.90);
+    border-right: 100px solid transparent;
+}
+
+#square {
+    background-color: red;
+    clear:both;
+    height:60px;
+    width:200px;
+}
+
+.align div {
+    float: left;
+}
+
+
+html, body, main, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background: blue;
+}
+
+main {
+    display: block;
+    width: 75%;
+    height: 300px;
+    margin: auto;
+    background: white;
+    color: red;
+    text-align: left;
+}

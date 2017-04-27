@@ -1,0 +1,74 @@
+<page-title title="Contact Me"></page-title>
+<ul class="tiled">
+	<li class="tile smaller">
+		<a href="https://www.linkedin.com/in/shannon-capper-81436a130" target="_blank" class="button-contents">
+			<i class="icon fa fa-linkedin-square fa-5x"></i>
+			Shannon Capper
+		</a>
+	</li>
+	<li class="tile smaller">
+		<a href="tel:1-805-231-3689" class="button-contents tel">
+			<i class="icon fa fa-phone fa-5x"></i>
+			(805) 231-3689
+		</a>
+	</li>
+	<li class="tile smaller">
+		<p class="button-contents">
+			<i class="icon fa fa-envelope fa-4x"></i>
+			ShannonLCapper<br>@gmail.com
+		</p>
+	</li>
+</ul>
+<div class="separator">
+	<div class="header-outer patch ccw">
+		<h3 class="stitch">Or send me a message</h3>
+	</div>
+	<div class="header-outer gold patch cw">
+		<img class="stitch" id="airplane" src="images/paper-airplane/paper-airplane.png" srcset="images/paper-airplane/paper-airplane.svg" alt="Paper Airplane">
+	</div>
+</div>
+<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxrZfK7_EoKC5ekeECxrz5TwbcQ1ZR5vHatDU_hRu0BvOn4sZLe/exec">
+	<div class="form-container header-outer green">
+	 	<div class="form-contents stitch gold">
+
+	    <fieldset>
+	      <label for="name">Name</label>
+	      <input type="text" id="name-form" name="name" required placeholder="Your Name">
+	    </fieldset>
+
+	    <fieldset>
+	      <label for="email">Email</label>
+	      <input type="email" id="email-form" name="email" value=""
+	      required placeholder="your.email@email.com">
+	      <div id="email-invalid" style="display: none">
+	        Must be a valid email address</div>
+	    </fieldset>
+
+	    <fieldset>
+	      <label for="phone">Phone</label>
+	      <input type="tel" id="phone-form" name="phone">
+	    </fieldset>
+
+	    <fieldset>
+	      <label for="company">Company</label>
+	      <input type="text" id="company-form" name="company">
+	    </fieldset>
+
+	    <fieldset class="message">
+	      <label for="message">Message</label>
+	      <textarea type="text" id="message-form" name="message" rows="5" required
+	      placeholder="Your message here..."></textarea>
+	    </fieldset>
+
+    	<button class="button-success form-submit">Submit</button>
+
+		</div>
+	</div>
+</form> 
+
+<div style="display:none;" id="thankyou_message" class="header-outer green">
+	<h2 class="stitch gold">
+		Thanks for the message!<br>
+		I'll get back to you soon as possible.
+	</h2>
+</div>

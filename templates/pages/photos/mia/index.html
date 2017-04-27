@@ -1,0 +1,232 @@
+<page-title title="Mia Photos"></page-title>
+
+<ul class="list-unstyled gallery">
+	<li ng-repeat="photo in photosCtrl.photos">
+		<figure>
+			<a target="_blank" ng-href="{{photo.full}}">
+				<img ng-src="{{photo.thumb}}" alt="{{photo.alt}}" width="{{photo.width}}" height="{{photo.height}}">
+				<figcaption>{{photo.caption}}</figcaption>
+			</a>
+		</figure>
+	</li>
+</ul>
+
+
+
+
+<!-- <div class="responsive"><figure>
+	<a target="_blank" href="images/1.JPG">
+		<img src="images/1.JPG" alt="Mia sleeping on the couch" width="6000" height="4000">
+	</a>
+	<figcaption>Sleepy dog</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/2.JPG">
+		<img src="images/2.JPG" alt="Mia yawning like a lion" width="6000" height="4000">
+	</a>
+	<figcaption>Rawr</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/3.JPG">
+		<img src="images/3.JPG" alt="Mia looking up at camera" width="6000" height="4000">
+	</a>
+	<figcaption>Glamour pic</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/4.JPG">
+		<img src="images/4.JPG" alt="Mia looking up at camera" width="6000" height="4000">
+	</a>
+	<figcaption>Glamour pic #2</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/5.JPG">
+		<img src="images/5.JPG" alt="Mia yawning" width="6000" height="4000">
+	</a>
+	<figcaption>Big yawn</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/6.JPG">
+		<img src="images/6.JPG" alt="Mia laying on the floor, looking tired" width="6000" height="4000">
+	</a>
+	<figcaption>Relaxed doggie</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/7.JPG">
+		<img src="images/7.JPG" alt="Mia and Michael sleeping on the couch" width="6000" height="4000">
+	</a>
+	<figcaption>Nap buddies</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/8.JPG">
+		<img src="images/8.JPG" alt="Mia and Michael sleeping on the couch" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/9.JPG">
+		<img src="images/9.JPG" alt="Mia on the porch" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/10.JPG">
+		<img src="images/10.JPG" alt="Mia sitting in the sun" width="6000" height="4000">
+	</a>
+	<figcaption>Soaking up the rare Washington sunshine</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/11.JPG">
+		<img src="images/11.JPG" alt="Mia by the recliner" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/12.JPG">
+		<img src="images/12.JPG" alt="Mia trotting" width="6000" height="4000">
+	</a>
+	<figcaption>Look at those stubby legs</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/13.JPG">
+		<img src="images/13.JPG" alt="Mia running" width="6000" height="4000">
+	</a>
+	<figcaption>Looking more energetic than usual</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/14.JPG">
+		<img src="images/14.JPG" alt="Mia by a stream" width="6000" height="4000">
+	</a>
+	<figcaption>On a hike!</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/15.JPG">
+		<img src="images/15.JPG" alt="Mia by a stream" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/16.JPG">
+		<img src="images/16.JPG" alt="Mia in some bushes" width="6000" height="4000">
+	</a>
+	<figcaption>Exploring</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/17.JPG">
+		<img src="images/17.JPG" alt="Mia in some bushes" width="6000" height="4000">
+	</a>
+	<figcaption>Having a blast</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/18.JPG">
+		<img src="images/18.JPG" alt="Mia sticking her head out from deep bushes" width="6000" height="4000">
+	</a>
+	<figcaption>*Indiana Jones music plays*</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/19.JPG">
+		<img src="images/19.JPG" alt="Mia looking directly at the camera" width="6000" height="4000">
+	</a>
+	<figcaption>Can I have a treat?</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/20.JPG">
+		<img src="images/20.JPG" alt="Mia chasing a treat" width="6000" height="4000">
+	</a>
+	<figcaption>Look at those ears!</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/21.JPG">
+		<img src="images/21.JPG" alt="Mia jumping a barrier" width="6000" height="4000">
+	</a>
+	<figcaption>Her most agile moment ever</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/22.JPG">
+		<img src="images/22.JPG" alt="Mia finishing her jump" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/23.JPG">
+		<img src="images/23.JPG" alt="A wet Mia shaking" width="6000" height="4000">
+	</a>
+	<figcaption>Post-bath shakes</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/24.JPG">
+		<img src="images/24.JPG" alt="A slightly damp Mia looking at the camera" width="6000" height="4000">
+	</a>
+	<figcaption>Nice and clean after a bath</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/25.JPG">
+		<img src="images/25.JPG" alt="Mia's face, in profile" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/26.JPG">
+		<img src="images/26.JPG" alt="Mia resting her head on the ground" width="6000" height="4000">
+	</a>
+	<figcaption>Such a sweet dog</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/27.JPG">
+		<img src="images/27.JPG" alt="Mia standing at the glass door, wanting inside" width="6000" height="4000">
+	</a>
+	<figcaption>Let me in!</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/28.JPG">
+		<img src="images/28.JPG" alt="Mia sleeping in her bed" width="6000" height="4000">
+	</a>
+	<figcaption>Snoozing</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/29.JPG">
+		<img src="images/29.JPG" alt="Mia sleeping in her bed" width="6000" height="4000">
+	</a>
+	<figcaption><br></figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/30.JPG">
+		<img src="images/30.JPG" alt="Mia rubbing her face on the ground on the porch" width="6000" height="4000">
+	</a>
+	<figcaption>Face scratches in the sun</figcaption>
+</figure></div>
+
+<div class="responsive"><figure>
+	<a target="_blank" href="images/31.JPG">
+		<img src="images/31.JPG" alt="A Mia on the trail, looking at the camera" width="6000" height="4000">
+	</a>
+	<figcaption>Enjoying her walk</figcaption>
+</figure></div> -->
